@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import moment from "moment";
 import Link from "next/link";
 import { getRecentPosts, getSimilarPosts } from "@/services";
+import Image from "next/image";
 
 const PostWidget = ({ categories, slug }) => {
   const [data, setData] = useState([]);
@@ -21,11 +22,12 @@ const PostWidget = ({ categories, slug }) => {
       </h3>
       {data.map((item, index) => (
         <div key={index} className="flex items-center w-full mb-4">
-          <div className="w-16 flex-none">
-            <img
-              height="60px"
-              width="60px"
-              className="align-middle rounded-full"
+          <div className="w-16 h-16 flex-none">
+            <Image
+              height={60}
+              width={60}
+              unoptimized
+              className="align-middle rounded-full h-[60px]"
               src={item.featuredImage.url}
             />
           </div>
