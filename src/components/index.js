@@ -7,3 +7,4 @@ export { default as PostWidget } from "./PostWidget";
 export { default as Comments } from "./Comments";
 export { default as CommentsForm } from "./CommentForm";
 export { default as Loader } from "./Loader";
+export { default as FeaturePostCard } from "./FeaturePostCard";
